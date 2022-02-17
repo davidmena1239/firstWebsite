@@ -1,0 +1,315 @@
+@charset "utf-8";
+/* CSS Document */
+
+.heroimage{
+    background-image: url("images/friends\ playing.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 40rem;
+    background-attachment: fixed;
+}
+
+.herotext, .textContact, .textAbout{
+    text-align: center;
+	color: #ECC046;
+	font-size: 3.5em;
+	padding-top: 14rem; 
+    font-family: 'Orbitron', sans-serif;
+    text-shadow: 4px 4px 6px #DC7726;
+}
+
+.herotext2{
+    text-align: center;
+	color: #F5F7ED;
+	font-size: 2.5em;
+    font-family: 'Abel', sans-serif;
+    text-shadow: 4px 4px 6px black;
+}
+
+.img-thumbnail{
+    background-color: #ECC046;
+    border: 1px solid #ECC046; 
+}
+
+.text1, .text2{
+    text-align: center;
+    font-family: 'Abel', sans-serif;
+}
+
+.text1 h3, .text2 h3{
+    font-family: 'Orbitron', sans-serif;
+    text-shadow: 3px 2px 7px black;
+}
+
+.navcolor{
+    background-color: #FFA500;
+}
+
+main{
+    background-color: #DC7726;
+    color: #F5F7ED;
+}
+
+footer{
+    font-size: .80em;
+    font-style: italic;
+    text-align: center;
+    background-color: #FFA500;
+    color: #F5F7ED;
+}
+
+.heroimageContact{
+    background-image: url("images/Contact\ Us.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 40rem;
+}
+
+.formFont{
+    font-family: 'Abel', sans-serif;
+    font-size: 1.15em;
+}
+
+.buttonColor{
+    color: #F5F7ED;
+    background-color: #FFA500;
+    font-size: 1.2em;
+}
+.buttonColor:hover{
+    background-color: #ECC046;
+}
+
+.thanks{
+    background-image: url("images/coffee\ cup.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 45rem;
+} 
+.cta{
+	color: #F5F7ED;
+    background-color: #FFA500;
+    font-family: 'Abel', sans-serif;
+    font-size: 1.5em;
+}
+.cta:hover{
+    background-color: #ECC046;
+    color: black;
+}
+
+.directionText{
+    font-family: 'Abel', sans-serif;
+    font-size: 1.5em
+}
+.directionText h2{
+    font-family: 'Orbitron', sans-serif;
+    text-shadow: 3px 2px 7px black;
+}
+
+.add{
+    font-family: 'Orbitron', sans-serif;
+}
+
+.phone{
+    font-family: 'Orbitron', sans-serif;
+}
+
+.hours{
+    font-family: 'Orbitron', sans-serif;
+}
+
+.days{
+    font-weight: bold;
+}
+
+
+@media only screen and (max-width: 1024px){
+    .mapMobile{
+        overflow: hidden;
+        padding-bottom: 55%;
+        height: 0;
+    }
+}
+
+@media only all and (max-width: 768px){
+    .mapMobile{
+        overflow: hidden;
+        padding-bottom: 55%;
+    }
+}
+
+/*About us page*/
+.heroimageAbout{
+    background-image: url("images/about.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 40rem;
+}
+
+.boxTitle{
+    font-family: 'Orbitron', sans-serif;
+    text-shadow: 3px 2px 7px black;
+   
+}
+.boxText{
+    text-align: center;
+    padding: 20px;
+    background-color: #FFA500;
+    border: 3px solid #ECC046;
+}
+
+
+/* GRID MENU */
+.container{
+    max-width: 1200px;
+    margin: 0 auto; /*makes it centered*/
+    padding: 1.5em;
+}
+
+.menu{
+    font-family: 'Abel', sans-serif;
+    font-size: 14px;
+
+}
+
+.heading{
+    margin: 0;
+    padding-bottom: 1em;
+    border-bottom: 2px solid #F5F7ED;
+    font-family: 'Orbitron', sans-serif;
+    text-shadow: 3px 2px 7px black;
+}
+.bevGroup, .foodGroup{   /* main container */
+    display: grid;
+    grid-template-columns: 1fr; /*this allows you to specify what your columns look like and how they will be sized. 1fr means each grid column will take up the full width of our menu group */ 
+    gap: 1.5em; /*space between each menu items */
+    padding: 1.5em 0; /*top/bottom and left/right*/
+
+}
+
+.item{
+    display: flex; /*will put the text next to the image*/
+}
+
+.itemImage{
+    width: 80px;
+    height: 80px;
+    flex-shrink: 0; /*Will keep the image at the dimensions we set it, so it won't get shrunk*/
+    object-fit: cover;
+    margin-right: 1.5em;
+
+}
+
+.itemText{
+    flex-grow: 1; /*whole width taken up by text now*/
+
+}
+
+.itemHeading{
+    display: flex;
+    justify-content: space-between; /*adds space between the two span content (item and price)*/
+    margin: 0; /*to make heading inline with top of image*/
+    font-weight: bold;
+}
+
+.itemName{
+    margin-right: 1.5em; /*puts space between heading and price when shrinking*/
+}
+
+@media screen and (min-width: 992px) { /*for desktop, if screen larger then 992*/
+    .menu{
+        font-size: 16px;
+    }
+
+    .bevGroup, .foodGroup{
+        grid-template-columns: 1fr 1fr; /*this will give us 2 columns that are evenly sized*/
+    }
+
+    .itemImage{
+        width: 125px;
+        height: 125px;
+    }
+}
+
+/* GRID SPECS */
+.container{
+    max-width: 1200px;
+    margin: 0 auto; /*makes it centered*/
+    padding: 1.5em;
+}
+
+.specs{
+    font-family: 'Abel', sans-serif;
+    font-size: 15px;
+
+}
+
+.systemHeading{
+    margin: 0;
+    padding-bottom: 1em;
+    border-bottom: 2px solid #F5F7ED;
+    font-family: 'Orbitron', sans-serif;
+    text-shadow: 3px 2px 7px black;
+}
+.consoleGroup{   /* main container */
+    display: grid;
+    grid-template-columns: 1fr; /*this allows you to specify what your columns look like and how they will be sized. 1fr means each grid column will take up the full width of our menu group */ 
+    gap: 1.5em; /*space between each menu items */
+    padding: 1.5em 0; /*top/bottom and left/right*/
+
+}
+
+.system{
+    display: flex; /*will put the text next to the image*/
+}
+
+.systemImage{
+    width: 350px;
+    height: 350px;
+    flex-shrink: 0; /*Will keep the image at the dimensions we set it, so it won't get shrunk*/
+    object-fit: fill;
+    margin-right: 1.5em;
+
+}
+  
+.systemText{
+    flex-grow: 1; /*whole width taken up by text now*/
+
+}
+
+.specsHeading{
+    display: flex;
+    margin: 0; /*to make heading inline with top of image*/
+    font-weight: bold;
+}
+.specsHeading1{
+    display: flex;
+    margin: 0; /*to make heading inline with top of image*/
+    font-family: 'Orbitron', sans-serif;
+    text-shadow: 3px 2px 7px black;
+}
+
+.specsName{
+    margin-right: 1.5em; 
+}
+
+@media screen and (max-width: 992px) { 
+    .menu{
+        font-size: 16px;
+    }
+
+    .consoleGroup{
+        grid-template-columns: 1fr; 
+    }
+
+    .systemImage{
+        width: 325px;
+        height: 325px;
+    }
+
+    .system{
+        display: block; /*will put the text next to the image*/
+    }
+}
